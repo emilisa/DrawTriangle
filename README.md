@@ -6,7 +6,6 @@ Console app that draws Triangle
 using System;
 using System.Threading;
 
-
 class DrawTriangle
 {
     static void Main()
@@ -20,9 +19,6 @@ class DrawTriangle
 
         char drawSign = char.Parse(Console.ReadLine());
 
-
-        //char drawSign = "\u0005";
-
         char emptySpace = ' ';
 
         Console.WriteLine("Моля въведи брой символи от който ще се състой ");
@@ -30,14 +26,11 @@ class DrawTriangle
 
         int elementCount = int.Parse(Console.ReadLine());
 
-        //int elementCount = 9;
-
         Console.WriteLine("Моля въведи цвят на триъгълника -'white','red' или 'green'");
         Console.WriteLine("за произволен цвят въведи 'random'");
 
         string colorType = Console.ReadLine();
         
-
         Entrance(drawSign, emptySpace, elementCount, colorType);
 
     }
@@ -66,7 +59,6 @@ class DrawTriangle
         }
     }
 
-
     private static void Triangle(char triangleDrawSign, char emptySpace, int triangleElementCount, string colorType)
     {
         Colorize(colorType);
@@ -76,7 +68,6 @@ class DrawTriangle
         int rowCount = Convert.ToInt32(sqrt);
         
         int triangleBase = ((rowCount * 2) - 1);
-
 
         for (int m = 1, n = 1; m <= rowCount; m++, n--)
         {
@@ -89,55 +80,13 @@ class DrawTriangle
                     Console.Write(emptySpace);
                 }
 
-                //else if (x == (rowCount + 1)) // чертае различна по цвят или вид височина на триъгълника
-                //{
-                //    Console.ResetColor();
-
-                //    Console.ForegroundColor = ConsoleColor.Yellow;
-
-                //    Console.Write(triangleDrawSign);
-
-                //    Colorize(colorType); //- не работи с рандом генератора на цвят!
-                //}
-
-                //else if (m == rowCount) // чертае различна по цвят или вид основа на триъгълника
-                //{
-                //    Console.ResetColor();
-
-                //    Console.ForegroundColor = ConsoleColor.Blue;
-
-                //    Console.Write(triangleDrawSign);
-
-                //    Colorize(colorType); //- не работи с рандом генератора на цвят!
-                //}
-
-                //else if ((x - (rowCount + n)) == 0 || ((rowCount + m) - x) == 0) // чертае различни по цвят или вид страни на триъгълника
-                //{
-                //    Console.ResetColor();
-
-                //    Console.ForegroundColor = ConsoleColor.Yellow;
-
-                //    Console.Write(triangleDrawSign);
-
-                //    Colorize(colorType); //- не работи с рандом генератора на цвят!
-                //}
-
                 else
                 {
                     Console.Write(triangleDrawSign);
-                    
-                    //Console.ForegroundColor = color; // чертае различен по цвят или вид пълнеж на триъгълника
-
-                    //Console.Write(emptySpace); // чертае триъгълник без пълнеж
-
-                    //Console.ResetColor();
-
+            
                     //Thread.Sleep(75);
-
                 }
-
             }
-
         }
 
         Console.ResetColor();
@@ -149,7 +98,6 @@ class DrawTriangle
             triangleElementCount, triangleDrawSign, rowCount, triangleBase, colorType);
 
         ExitOrNew();
-
     }
     private static object Colorize(string colorType)
     {
@@ -201,7 +149,6 @@ class DrawTriangle
         }
 
         return Console.ForegroundColor;
-
     }
     private static void ExitOrNew()
     {
