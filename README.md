@@ -32,7 +32,6 @@ class DrawTriangle
         string colorType = Console.ReadLine();
         
         Entrance(drawSign, emptySpace, elementCount, colorType);
-
     }
 
     private static void Entrance(char drawSign, char emptySpace, int elementCount, string colorType)
