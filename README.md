@@ -7,8 +7,8 @@ using System;
 using System.Threading;
 
 class DrawTriangle
+
 {
-    
     static void Main()
     {
         Console.BufferWidth = 190;
