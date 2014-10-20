@@ -4,12 +4,15 @@ DrawTriangle
 Console app that draws Triangle
 
 using System;
+
 using System.Threading;
 
 class DrawTriangle 
 {
+    
     static void Main()
     {
+        
         Console.BufferWidth = 190;
     
         Console.Title = "Triangle";
