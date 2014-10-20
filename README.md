@@ -1,13 +1,14 @@
 DrawTriangle
 ============
 
-Console app that draws Triangle
+// Console app that draws Triangle
 
 using System;
 
 using System.Threading;
 
-class DrawTriangle 
+class DrawTriangle
+
 {
     
     static void Main()
